@@ -4,13 +4,22 @@
     
 * _Intro to SwiftUI_
 * _Learning more about SwiftUI_
-* _MVVM and Swift type system_
+* MVVM and Swift type system
 * Memorize Game logic
 * Properties Layout @ViewBuilder
 * Protocol Shapes
 * ViewModifier Animation
 * Animation Demonstration
 * EmojiArt Drag and Drop Multithreading
+
+### Apple Developer Documentation
+
+Repository project name: __"Landmarks"__
+
+REFERENCES:
+
+* [Creating and Combining Views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
+
 ## Week 02 - 11th to 17th
     
 * Multithreading Demo Gestures

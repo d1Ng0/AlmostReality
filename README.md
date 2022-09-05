@@ -4,7 +4,7 @@
     
 * _Intro to SwiftUI_
 * _Learning more about SwiftUI_
-* MVVM and Swift type system
+* _MVVM and Swift type system_
 * Memorize Game logic
 * Properties Layout @ViewBuilder
 * Protocol Shapes
@@ -19,6 +19,7 @@ Repository project name: __"Landmarks"__
 REFERENCES:
 
 * [Creating and Combining Views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
+* [Building Lists and Navigation](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
 
 ## Week 02 - 11th to 17th
     

@@ -5,7 +5,7 @@
 * _Intro to SwiftUI_
 * _Learning more about SwiftUI_
 * _MVVM and Swift type system_
-* Memorize Game logic
+* _Memorize Game logic_
 * Properties Layout @ViewBuilder
 * Protocol Shapes
 * ViewModifier Animation

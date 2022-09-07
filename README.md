@@ -6,8 +6,8 @@
 * _Learning more about SwiftUI_
 * _MVVM and Swift type system_
 * _Memorize Game logic_
-* Properties Layout @ViewBuilder
-* Protocol Shapes
+* _Properties Layout @ViewBuilder_
+* _Protocol Shapes_
 * ViewModifier Animation
 * Animation Demonstration
 * EmojiArt Drag and Drop Multithreading

@@ -1,9 +1,10 @@
 import Foundation
+import Combine
 
-var landmarks: [Landmark] = load("landmarkData.json")
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
 
-/*The load method relies on the return type’s conformance to the Decodable protocol, which is one component of the Codable protocol
- */
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     

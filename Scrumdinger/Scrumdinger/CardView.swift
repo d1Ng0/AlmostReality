@@ -6,6 +6,8 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(scrum.title)
+                .accessibilityAddTraits(.isHeader)
+                .font(.headline)
             Spacer()
             HStack {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
@@ -20,7 +22,6 @@ struct CardView: View {
         .padding()
         .foregroundColor(scrum.theme.accentColor)
     }
-
 }
 
 struct CardView_Previews: PreviewProvider {

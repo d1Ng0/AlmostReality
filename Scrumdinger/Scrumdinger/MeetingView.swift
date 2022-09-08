@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Scrumdinger
-//
-//  Created by mac_sys1 on 9/6/22.
-//
-
 import SwiftUI
 
 struct MeetingView: View {
@@ -38,7 +31,7 @@ struct MeetingView: View {
                 .accessibilityLabel("Next speaker")
             }
         }
-        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .padding()
     }
 }
 

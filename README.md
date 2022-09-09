@@ -1,7 +1,13 @@
-# SwiftUI
+# Mastering AR/VR
 
-## Week 01 - 4th to 10th
-    
+_"Imagine yourself 10, 20, or 30 years from now"._
+_"Edgar Dale states that the human brain remembers 10% of what we read, 20% of what we hear, and 90% of what we do."_
+
+---
+
+## Prerequisites: SwiftUI
+### CS193
+
 * _Intro to SwiftUI_
 * _Learning more about SwiftUI_
 * _MVVM and Swift type system_
@@ -10,19 +16,7 @@
 * _Protocol Shapes_
 * ViewModifier Animation
 * Animation Demonstration
-* EmojiArt Drag and Drop Multithreading
-
-### Apple Developer Documentation
-
-Repository project name: __"Landmarks"__
-
-REFERENCES:
-
-* [Creating and Combining Views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
-* [Building Lists and Navigation](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
-
-## Week 02 - 11th to 17th
-    
+* EmojiArt Drag and Drop Multithreading    
 * Multithreading Demo Gestures
 * Error Handling Persistence
 * Bindings Sheet Navigation EditMode
@@ -32,8 +26,13 @@ REFERENCES:
 * Multiplatform
 * Picker
 * Core Data
-  
-## Week 03 - ARKit
+
+### Apple Developer Tutorials - SwiftUI
+
+* [Creating and Combining Views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
+* [Building Lists and Navigation](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
+
+### Week 03 - ARKit
 
 * ARKit
 * SceneKit

@@ -13,6 +13,7 @@
 		C6821FDF28CD379F0001B2E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6821FDE28CD379F0001B2E0 /* Preview Assets.xcassets */; };
 		C6821FE728CD37ED0001B2E0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6821FE628CD37ED0001B2E0 /* CustomARView.swift */; };
 		C6821FE928CD3EC60001B2E0 /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */; };
+		C6821FEC28CE62A00001B2E0 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C6821FEB28CE62A00001B2E0 /* toy_drummer.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C6821FDE28CD379F0001B2E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6821FE628CD37ED0001B2E0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		C6821FEB28CE62A00001B2E0 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_drummer.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		C6821FD628CD379E0001B2E0 /* ARKitSwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C6821FEA28CE62540001B2E0 /* 3DModels */,
 				C6821FE528CD37CF0001B2E0 /* Feature Targets */,
 				C6821FD728CD379E0001B2E0 /* ARKitSwiftUIDemoApp.swift */,
 				C6821FDB28CD379F0001B2E0 /* Assets.xcassets */,
@@ -79,6 +82,14 @@
 				C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */,
 			);
 			path = "Feature Targets";
+			sourceTree = "<group>";
+		};
+		C6821FEA28CE62540001B2E0 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				C6821FEB28CE62A00001B2E0 /* toy_drummer.usdz */,
+			);
+			path = 3DModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				C6821FDF28CD379F0001B2E0 /* Preview Assets.xcassets in Resources */,
 				C6821FDC28CD379F0001B2E0 /* Assets.xcassets in Resources */,
+				C6821FEC28CE62A00001B2E0 /* toy_drummer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

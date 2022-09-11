@@ -134,7 +134,16 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 #### Project: 
 * `/ARKitSwiftUIDemo`
 
-
 --- 
+
+### Load .USDZ in RealityKit
+
+    let model = try! Entity.loadModel(named: “modelName”)
+
+When loading models this way, the scene freezes until the model is fully loaded. If you want to load a model after the experience has already started, you should use the asynchronous loader.
+
+#### Reference:
+* [RealityKit Basics - Medium](https://medium.com/futureproofd/realitykit-basics-part-1-8ede1143137b)
+* [Get 3D Content for Your Apple AR Apps // RealityKit + USDZ Tools - YouTube](https://www.youtube.com/watch?v=zm3s17PVxGA)
 
 ## Rotation weeks 1-13th

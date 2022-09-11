@@ -1,8 +1,18 @@
-//
-//  CustomARViewRepresentable.swift
-//  ARKitSwiftUIDemo
-//
-//  Created by mac_sys1 on 9/10/22.
-//
+import SwiftUI
+import ARKit
+import RealityKit
 
-import Foundation
+// Representable allow UIKit to run within SwiftUI
+struct CustomeARViewRepresentable: UIViewRepresentable {
+    func makeUIView(context: Context) -> some UIView {
+        let view = CustomARView()
+        let session = view.session
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal]
+        session.run(config)
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) { }
+    
+}

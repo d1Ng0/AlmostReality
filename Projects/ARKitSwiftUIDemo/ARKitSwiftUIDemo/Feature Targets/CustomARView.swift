@@ -13,5 +13,18 @@ class CustomARView: ARView {
     
     convenience init() {
         self.init(frame: UIScreen.main.bounds)
+//        self.configuration()
+//        placeBlueBlock()
+        
     }
+    
+    func configuration() {
+        let configuration = ARWorldTrackingConfiguration()
+        session.run(configuration)
+    }
+    
+    
+    
+//
+    
 }

@@ -4,6 +4,8 @@
 _"Imagine yourself 10, 20, or 30 years from now"._
 _"Edgar Dale states that the human brain remembers 10% of what we read, 20% of what we hear, and 90% of what we do."_
 
+No matter your level of expertise, it can be daunting to step out of your comfort zone when you’re first learning about new frameworks or technologies. 
+
 ---
 ## Prerequisites
 ### SwiftUI

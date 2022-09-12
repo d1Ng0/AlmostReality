@@ -14,6 +14,8 @@
 		C6821FE728CD37ED0001B2E0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6821FE628CD37ED0001B2E0 /* CustomARView.swift */; };
 		C6821FE928CD3EC60001B2E0 /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */; };
 		C6821FEC28CE62A00001B2E0 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C6821FEB28CE62A00001B2E0 /* toy_drummer.usdz */; };
+		C682200A28CECF310001B2E0 /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682200928CECF310001B2E0 /* ARAction.swift */; };
+		C682200C28CECF710001B2E0 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682200B28CECF710001B2E0 /* ARManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C6821FE628CD37ED0001B2E0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
 		C6821FEB28CE62A00001B2E0 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_drummer.usdz; sourceTree = "<group>"; };
+		C682200928CECF310001B2E0 /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
+		C682200B28CECF710001B2E0 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		C6821FE528CD37CF0001B2E0 /* Feature Targets */ = {
 			isa = PBXGroup;
 			children = (
+				C682200928CECF310001B2E0 /* ARAction.swift */,
+				C682200B28CECF710001B2E0 /* ARManager.swift */,
 				C6821FD928CD379E0001B2E0 /* ContentView.swift */,
 				C6821FE628CD37ED0001B2E0 /* CustomARView.swift */,
 				C6821FE828CD3EC60001B2E0 /* CustomARViewRepresentable.swift */,
@@ -164,8 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6821FDA28CD379E0001B2E0 /* ContentView.swift in Sources */,
+				C682200A28CECF310001B2E0 /* ARAction.swift in Sources */,
 				C6821FE728CD37ED0001B2E0 /* CustomARView.swift in Sources */,
 				C6821FD828CD379E0001B2E0 /* ARKitSwiftUIDemoApp.swift in Sources */,
+				C682200C28CECF710001B2E0 /* ARManager.swift in Sources */,
 				C6821FE928CD3EC60001B2E0 /* CustomARViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

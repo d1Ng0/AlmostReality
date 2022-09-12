@@ -1,3 +1,12 @@
 [
-
+  {
+    "libraryIdentifier" : "9fe712eaf0d060ec804f4cb4762ecc3a",
+    "format" : "model",
+    "displayName" : "ThomasHelmet.usdz"
+  },
+  {
+    "libraryIdentifier" : "753ee4e6a73f72bf103db8b7bdfa4f7f",
+    "format" : "audio",
+    "displayName" : "mixkit-science-fiction-computer-voice-238.wav"
+  }
 ]

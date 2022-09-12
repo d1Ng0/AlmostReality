@@ -1,12 +1,6 @@
-//
-//  ContentView.swift
-//  DaftPunkHelmets
-//
-//  Created by mac_sys1 on 9/11/22.
-//
-
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ContentView : View {
     var body: some View {
@@ -19,12 +13,14 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        
+        let faceConfig = ARFaceTrackingConfiguration()
+        arView.session.run(faceConfig)
+
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        let faceAnchor = try! Experience.loadThomasHelmet()
         
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        arView.scene.anchors.append(faceAnchor)
         
         return arView
         

@@ -1,8 +1,8 @@
-//
-//  ARManager.swift
-//  ARKitSwiftUIDemo
-//
-//  Created by mac_sys1 on 9/11/22.
-//
+import Combine
 
-import Foundation
+class ARManager {
+    static let shared = ARManager()
+    private init() {}
+    
+    var actionStream = PassthroughSubject<ARRaction, Never>()
+}

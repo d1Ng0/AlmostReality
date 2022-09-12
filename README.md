@@ -131,6 +131,7 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 * [RealityKit Component Manual - Apple Developer](https://developer.apple.com/documentation/realitykit/component)
 * [AR Creation Tools - Apple](https://developer.apple.com/augmented-reality/tools/)
 * [AR Apple Main Developer Page](https://developer.apple.com/augmented-reality/)
+* [__TO DOUBLE CHECK__ https://www.youtube.com/watch?v=7dRizQwiMic]
 #### Project: 
 * `/ARKitSwiftUIDemo`
 

@@ -9,20 +9,20 @@
 /* Begin PBXBuildFile section */
 		C6301E6C28CFF2C700246997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6301E6B28CFF2C700246997 /* AppDelegate.swift */; };
 		C6301E6E28CFF2C700246997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6301E6D28CFF2C700246997 /* ViewController.swift */; };
-		C6301E7028CFF2C700246997 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C6301E6F28CFF2C700246997 /* Experience.rcproject */; };
 		C6301E7328CFF2C700246997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7128CFF2C700246997 /* Main.storyboard */; };
 		C6301E7528CFF2C800246997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7428CFF2C800246997 /* Assets.xcassets */; };
 		C6301E7828CFF2C800246997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7628CFF2C800246997 /* LaunchScreen.storyboard */; };
+		C689D3EB28D186340052C202 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = C689D3EA28D186340052C202 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6301E6828CFF2C700246997 /* ARCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6301E6B28CFF2C700246997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6301E6D28CFF2C700246997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6301E6F28CFF2C700246997 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		C6301E7228CFF2C700246997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6301E7428CFF2C800246997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6301E7728CFF2C800246997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C689D3EA28D186340052C202 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Maya/assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +39,7 @@
 		C6301E5F28CFF2C700246997 = {
 			isa = PBXGroup;
 			children = (
+				C689D3EA28D186340052C202 /* assets */,
 				C6301E6A28CFF2C700246997 /* ARCardGame */,
 				C6301E6928CFF2C700246997 /* Products */,
 			);
@@ -57,7 +58,6 @@
 			children = (
 				C6301E6B28CFF2C700246997 /* AppDelegate.swift */,
 				C6301E6D28CFF2C700246997 /* ViewController.swift */,
-				C6301E6F28CFF2C700246997 /* Experience.rcproject */,
 				C6301E7128CFF2C700246997 /* Main.storyboard */,
 				C6301E7428CFF2C800246997 /* Assets.xcassets */,
 				C6301E7628CFF2C800246997 /* LaunchScreen.storyboard */,
@@ -124,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6301E7828CFF2C800246997 /* LaunchScreen.storyboard in Resources */,
+				C689D3EB28D186340052C202 /* assets in Resources */,
 				C6301E7528CFF2C800246997 /* Assets.xcassets in Resources */,
 				C6301E7328CFF2C700246997 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +139,6 @@
 			files = (
 				C6301E6E28CFF2C700246997 /* ViewController.swift in Sources */,
 				C6301E6C28CFF2C700246997 /* AppDelegate.swift in Sources */,
-				C6301E7028CFF2C700246997 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +287,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YRHZWWWS54;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -295,6 +296,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YRHZWWWS54;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -325,6 +328,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

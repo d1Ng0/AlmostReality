@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C61A1D9F28CFAEA100538485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A1D9E28CFAEA100538485 /* AppDelegate.swift */; };
 		C61A1DA128CFAEA100538485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A1DA028CFAEA100538485 /* ViewController.swift */; };
-		C61A1DA328CFAEA100538485 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C61A1DA228CFAEA100538485 /* Experience.rcproject */; };
 		C61A1DA628CFAEA100538485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61A1DA428CFAEA100538485 /* Main.storyboard */; };
 		C61A1DA828CFAEA100538485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61A1DA728CFAEA100538485 /* Assets.xcassets */; };
 		C61A1DAB28CFAEA100538485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61A1DA928CFAEA100538485 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		C61A1D9B28CFAEA100538485 /* RealityKitECSOranges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealityKitECSOranges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61A1D9E28CFAEA100538485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61A1DA028CFAEA100538485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C61A1DA228CFAEA100538485 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		C61A1DA528CFAEA100538485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C61A1DA728CFAEA100538485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61A1DAA28CFAEA100538485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			children = (
 				C61A1D9E28CFAEA100538485 /* AppDelegate.swift */,
 				C61A1DA028CFAEA100538485 /* ViewController.swift */,
-				C61A1DA228CFAEA100538485 /* Experience.rcproject */,
 				C61A1DA428CFAEA100538485 /* Main.storyboard */,
 				C61A1DA728CFAEA100538485 /* Assets.xcassets */,
 				C61A1DA928CFAEA100538485 /* LaunchScreen.storyboard */,
@@ -138,7 +135,6 @@
 			files = (
 				C61A1DA128CFAEA100538485 /* ViewController.swift in Sources */,
 				C61A1D9F28CFAEA100538485 /* AppDelegate.swift in Sources */,
-				C61A1DA328CFAEA100538485 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YRHZWWWS54;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -295,6 +292,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +315,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YRHZWWWS54;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -325,6 +324,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

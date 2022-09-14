@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  RealityKitECSOranges
-//
-//  Created by mac_sys1 on 9/12/22.
-//
-
 import UIKit
 
 @main

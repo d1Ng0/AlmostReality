@@ -7,9 +7,10 @@ _"Edgar Dale states that the human brain remembers 10% of what we read, 20% of w
 No matter your level of expertise, it can be daunting to step out of your comfort zone when you’re first learning about new frameworks or technologies. 
 
 ---
-## Prerequisites
-### SwiftUI
-####CS193
+## SwiftUI
+
+### CS193 Intro to SwiftUI
+
 Complete introduction to SwiftUI form Stanford:
 * _Intro to SwiftUI_
 * _Learning more about SwiftUI_
@@ -34,14 +35,13 @@ Complete introduction to SwiftUI form Stanford:
 * [Apple - Creating and Combining Views](https://developer.apple.com/tutorials/swiftui)
 * [Apple - Sample Apps tutorials](https://developer.apple.com/tutorials/sample-apps)
 
-#### UIKit
+--- 
+### UIKit
 <img src="/imgs/UIKit-struct.png" height="250">
 
 The structure of UIKit apps is based on the Model-View-Controller (MVC) design pattern.
 
 * [Apple - iOS App Dev Tutorials: Getting started with Today](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-today)
-
-
 
 ---
 
@@ -111,17 +111,16 @@ The project architecture is covered in _Flo's_ first "Intro to ARKit" video in t
 * [Interfacing with UIKit SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit)
 
 ---
-
-### RealityKit [with SwiftUI]
-
+## RealityKit
 <p align="center">
 <img src="/imgs/RealityKit.png"  height="300" class="center">
 </p>
 
 __ARView__ instance to display rendered 3D graphics to the user. A view has a single Scene instance that you access through the read-only scene property. To the view’s Scene instance you add one or more AnchorEntity instances that tell the view’s AR session how to tether content to something in the real world.
 
-With __RealityKit__ everything inside your scene is an __Entity__, and from here you can build everything into your ARView with the use of adding Components. If you’ve used SceneKit in the past, Entity is in many ways the new alternative to SCNNode. These components can turn your Entity to anything from an Anchor, to a Model or even a spotlight. 
-
+With __RealityKit__ everything inside your scene is an __Entity__, and from here you can build everything into your ARView with the use of adding Components. If you’ve used SceneKit in the past, Entity is in many ways the new alternative to SCNNode. These components can turn your Entity to anything from an Anchor, to a Model or even a spotlight.
+#### Project: 
+* `/ARKitSwiftUIDemo`
 #### Reference:
 * [Intro to ARKit 01: Project Setup & ARView - YoutTube
 ](https://www.youtube.com/watch?v=lamIxNozxv4)
@@ -134,26 +133,25 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 * [AR Creation Tools - Apple](https://developer.apple.com/augmented-reality/tools/)
 * [AR Apple Main Developer Page](https://developer.apple.com/augmented-reality/)
 * [__TO DOUBLE CHECK__ https://www.youtube.com/watch?v=7dRizQwiMic]
-#### Project: 
-* `/ARKitSwiftUIDemo`
 
---- 
-
-### Load .USDZ in RealityKit
+### Loading .USDZ in RealityKit
 
     let model = try! Entity.loadModel(named: “modelName”)
 
 When loading models this way, the scene freezes until the model is fully loaded. If you want to load a model after the experience has already started, you should use the asynchronous loader.
-
-#### References:
+##### References:
 * [RealityKit Basics - Medium](https://medium.com/futureproofd/realitykit-basics-part-1-8ede1143137b)
 * [Get 3D Content for Your Apple AR Apps // RealityKit + USDZ Tools - YouTube](https://www.youtube.com/watch?v=zm3s17PVxGA)
 * [Export .USDZ from Maya - YouTube](https://www.youtube.com/watch?v=Ae3kkAp35C4)
 
-#### RealityKit Face camera 
-
+### RealityKit Face camera 
 ##### References:
-
 * [Make an AR Animoji with RealityKit and Reality Composer](https://www.youtube.com/watch?v=xXX2s-cWJNw)
+
+
+
+
+
+
 
 ## Rotation weeks 1-13th

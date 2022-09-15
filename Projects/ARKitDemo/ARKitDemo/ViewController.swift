@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(boxNode)
     }
     
-    // Adds a tapGesture butI am not clear how the #selector works
+    // Adds a tapGesture but I am not clear how the #selector works
     func addTapGestureToSceneView() {
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self,

@@ -9,20 +9,20 @@
 /* Begin PBXBuildFile section */
 		C6F79E4B28D2CD35005AF151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F79E4A28D2CD35005AF151 /* AppDelegate.swift */; };
 		C6F79E4D28D2CD35005AF151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F79E4C28D2CD35005AF151 /* ViewController.swift */; };
-		C6F79E4F28D2CD35005AF151 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C6F79E4E28D2CD35005AF151 /* Experience.rcproject */; };
 		C6F79E5228D2CD35005AF151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F79E5028D2CD35005AF151 /* Main.storyboard */; };
 		C6F79E5428D2CD36005AF151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F79E5328D2CD36005AF151 /* Assets.xcassets */; };
 		C6F79E5728D2CD36005AF151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F79E5528D2CD36005AF151 /* LaunchScreen.storyboard */; };
+		C6F79E5E28D2D03C005AF151 /* Garlic.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C6F79E5D28D2D03C005AF151 /* Garlic.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6F79E4728D2CD35005AF151 /* RealityKitSimpleGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealityKitSimpleGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F79E4A28D2CD35005AF151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F79E4C28D2CD35005AF151 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6F79E4E28D2CD35005AF151 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		C6F79E5128D2CD35005AF151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6F79E5328D2CD36005AF151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6F79E5628D2CD36005AF151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6F79E5D28D2D03C005AF151 /* Garlic.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Garlic.usdz; path = ../ARCardGame/Maya/3DAssets/usdz/Garlic.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +39,7 @@
 		C6F79E3E28D2CD35005AF151 = {
 			isa = PBXGroup;
 			children = (
+				C6F79E5D28D2D03C005AF151 /* Garlic.usdz */,
 				C6F79E4928D2CD35005AF151 /* RealityKitSimpleGesture */,
 				C6F79E4828D2CD35005AF151 /* Products */,
 			);
@@ -57,7 +58,6 @@
 			children = (
 				C6F79E4A28D2CD35005AF151 /* AppDelegate.swift */,
 				C6F79E4C28D2CD35005AF151 /* ViewController.swift */,
-				C6F79E4E28D2CD35005AF151 /* Experience.rcproject */,
 				C6F79E5028D2CD35005AF151 /* Main.storyboard */,
 				C6F79E5328D2CD36005AF151 /* Assets.xcassets */,
 				C6F79E5528D2CD36005AF151 /* LaunchScreen.storyboard */,
@@ -124,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F79E5728D2CD36005AF151 /* LaunchScreen.storyboard in Resources */,
+				C6F79E5E28D2D03C005AF151 /* Garlic.usdz in Resources */,
 				C6F79E5428D2CD36005AF151 /* Assets.xcassets in Resources */,
 				C6F79E5228D2CD35005AF151 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +139,6 @@
 			files = (
 				C6F79E4D28D2CD35005AF151 /* ViewController.swift in Sources */,
 				C6F79E4B28D2CD35005AF151 /* AppDelegate.swift in Sources */,
-				C6F79E4F28D2CD35005AF151 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +302,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.d1Ng0.dev.RealityKitSimpleGesture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,9 +335,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.d1Ng0.dev.RealityKitSimpleGesture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

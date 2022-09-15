@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  RealityKitSimpleGesture
-//
-//  Created by mac_sys1 on 9/14/22.
-//
-
 import UIKit
 import RealityKit
 
@@ -14,11 +7,32 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+//        let box = createBox()
+        let box = loadModel()
+        placeBox(box: box, at: SIMD3(x: 0, y: 0, z: -1))
+        installGestures(on: box)
+        }
+    
+    func createBox() -> ModelEntity {
+        let box = MeshResource.generateBox(size: 0.5)
+        let boxMaterial = SimpleMaterial(color: .blue, isMetallic: true)
+        let boxEntity = ModelEntity(mesh: box, materials: [boxMaterial])
+        return boxEntity
+    }
+    
+    func placeBox(box: ModelEntity, at position: SIMD3<Float>){
+        let boxAnchor = AnchorEntity(world: position)
+        boxAnchor.addChild(box)
+        arView.scene.addAnchor(boxAnchor)
+    }
+    
+    func installGestures(on object: ModelEntity){
+        object.generateCollisionShapes(recursive: true)
+        arView.installGestures(for: object)
+    }
+    
+    func loadModel() -> ModelEntity {
+        let model = try! Entity.loadModel(named: "Garlic")
+        return model
     }
 }

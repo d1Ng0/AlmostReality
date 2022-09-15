@@ -1,4 +1,4 @@
-# "Almost Reality"
+# "UnboundReality"
 ![splash](/imgs/splash.png)
 
 _"Imagine yourself 10, 20, or 30 years from now"._
@@ -9,29 +9,10 @@ No matter your level of expertise, it can be daunting to step out of your comfor
 ---
 ## SwiftUI
 
-### CS193 Intro to SwiftUI
+SwiftUI is a new way to build user interfaces for apps on Apple platforms. It allows developers to define the UI using Swift code.
 
-Complete introduction to SwiftUI form Stanford:
-* _Intro to SwiftUI_
-* _Learning more about SwiftUI_
-* _MVVM and Swift type system_
-* _Memorize Game logic_
-* _Properties Layout @ViewBuilder_
-* _Protocol Shapes_
-* ViewModifier Animation
-* Animation Demonstration
-* EmojiArt Drag and Drop Multithreading    
-* Multithreading Demo Gestures
-* Error Handling Persistence
-* Bindings Sheet Navigation EditMode
-* Published More Persistence
-* Document Architecture
-* UIKit Integration
-* Multiplatform
-* Picker
-* Core Data
-
-### Apple Developer Tutorials - SwiftUI
+##### References:
+* [CS193 Intro to SwiftUI](https://www.youtube.com/watch?v=bqu6BquVi2M&list=PLpGHT1n4-mAsxuRxVPv7kj4-dQYoC3VVu)
 * [Apple - Creating and Combining Views](https://developer.apple.com/tutorials/swiftui)
 * [Apple - Sample Apps tutorials](https://developer.apple.com/tutorials/sample-apps)
 
@@ -40,39 +21,30 @@ Complete introduction to SwiftUI form Stanford:
 <img src="/imgs/UIKit-struct.png" height="250">
 
 The structure of UIKit apps is based on the Model-View-Controller (MVC) design pattern.
-
+##### References:
 * [Apple - iOS App Dev Tutorials: Getting started with Today](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-today)
 
 ---
+### ARKit
 
-## ARKit with UIKit
-### ARKit Session Life Cycles and Tracking Quality
-There are session life cycles to an augmented reality app. The normal flow of your app goes as follows for the augmented reality camera’s tracking states:
+ARKit is Apple's Augmented Reality (AR) development platform for iOS mobile devices.
 
-1.	Not available
-2.	Limited with reason
-3.	Normal
-
-All of these values are a part of an enum value type, `ARCamera.TrackingState`.
-Interruption reconciliation should be available to bring your user back to the normal tracking state.
-
-### References: 
+##### References: 
 * [Mastering ARKit: Apple’s Augmented Reality App Development Platform _(Jayven Nhan)_](https://learning.oreilly.com/library/view/mastering-arkit-apples)
-
-#### Projects: 
+##### Projects: 
 * `/Playgrounds/Matrix.playground`
 
 ---
-### Providing 3D Virtual Content with SceneKit using UIKit
+### SceneKit
 
 ARKit automatically matches SceneKit space to the real world, placing a virtual object so that it appears to maintain a real-world position requires that you set the object's SceneKit position appropriately.
 
 Alternatively, you can use the ARAnchor class to track real-world positions, either by creating anchors yourself and adding them to the session or by observing anchors that ARKit automatically creates. For example, when plane detection is enabled, ARKit adds and updates anchors for each detected plane. 
 
-### Getting user 2D screen-space touches
+#### Getting user 2D screen-space touches
 The first thing we need to implement is capturing user touches on the screen of the device do is to get notified when the user touches the screen of the device.
 
-### Find the place in the world with a raycast
+##### Find the place in the world with a raycast
 <p align="center">
 <img src="/imgs/raycast.png"  height="200" class="center">
 </p>
@@ -87,17 +59,16 @@ __First__, use `ARSCNView` which offers a `raycastQuery` as follows:
 * `alignment`: the alignment of the plane
 
 __Second__, we need to perform the `raycast` itself as we only created the query so far. This time we need to use the current `session` that is given to us by the sceneView again: `result = sceneView.session.raycast(query)`
-### Creating an object to place into the world
+##### Creating an object to place into the world
 The `result.worldTransform` can be used to create a matrix (of type SCNMatrix4) that can set to the cube transform: `cube.transform = SCNMatrix4(result.worldTransform)`
 
-#### Reference:
+##### Reference:
 * [ARKit + SceneKit: Place content in the real world](https://stefanblos.com/posts/arkit_scenekit_place_objects/)
 * [ARKit: Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/providing_3d_virtual_content_with_scenekit)
-#### Project: 
+##### Project: 
 * `/ARKitDemo`
 
 ---
-
 ### ARkit and SwiftUI
 
 To use ARKit in SwiftUI you need to make use of __UIViewRepresentable__ to create a SwiftUI container for your ARView. See the [Interfacing with UIKit SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit) for an example that uses representables.
@@ -111,17 +82,18 @@ The project architecture is covered in _Flo's_ first "Intro to ARKit" video in t
 * [Interfacing with UIKit SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit)
 
 ---
-## RealityKit
+### RealityKit
 <p align="center">
+<img src="/imgs/RealityKit2.png"  height="300" class="center">
 <img src="/imgs/RealityKit.png"  height="300" class="center">
 </p>
 
 __ARView__ instance to display rendered 3D graphics to the user. A view has a single Scene instance that you access through the read-only scene property. To the view’s Scene instance you add one or more AnchorEntity instances that tell the view’s AR session how to tether content to something in the real world.
 
 With __RealityKit__ everything inside your scene is an __Entity__, and from here you can build everything into your ARView with the use of adding Components. If you’ve used SceneKit in the past, Entity is in many ways the new alternative to SCNNode. These components can turn your Entity to anything from an Anchor, to a Model or even a spotlight.
-#### Project: 
+##### Project: 
 * `/ARKitSwiftUIDemo`
-#### Reference:
+##### Reference:
 * [Intro to ARKit 01: Project Setup & ARView - YoutTube
 ](https://www.youtube.com/watch?v=lamIxNozxv4)
 * [Intro to ARKit 02: Placing Object](https://www.youtube.com/watch?v=vL-JKo_wtxM)
@@ -134,19 +106,55 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 * [AR Apple Main Developer Page](https://developer.apple.com/augmented-reality/)
 * [__TO DOUBLE CHECK__ https://www.youtube.com/watch?v=7dRizQwiMic]
 
-### Loading .USDZ in RealityKit
+#### Loading .USDZ in RealityKit
 
     let model = try! Entity.loadModel(named: “modelName”)
 
 When loading models this way, the scene freezes until the model is fully loaded. If you want to load a model after the experience has already started, you should use the asynchronous loader.
+
 ##### References:
 * [RealityKit Basics - Medium](https://medium.com/futureproofd/realitykit-basics-part-1-8ede1143137b)
 * [Get 3D Content for Your Apple AR Apps // RealityKit + USDZ Tools - YouTube](https://www.youtube.com/watch?v=zm3s17PVxGA)
 * [Export .USDZ from Maya - YouTube](https://www.youtube.com/watch?v=Ae3kkAp35C4)
 
-### RealityKit Face camera 
+#### RealityKit Face camera 
 ##### References:
 * [Make an AR Animoji with RealityKit and Reality Composer](https://www.youtube.com/watch?v=xXX2s-cWJNw)
+
+#### 2D GestureRecognizer in UIKit
+
+Here is the simplest way to add Gestures on View in Swift 5:
+    
+    class ViewController: UIViewController {
+
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureFired))
+        myView.addGestureRecognizer(tapGestureRecognizer)
+        }
+
+        @objc func gestureFired() {
+            print("Tap gesture")
+        }
+
+##### Project:
+* `UIKitGestureRecognizer`
+##### References:
+* [Gesture Recognizers in Swift with Xcode 11 | iOS Development - YouTube](https://www.youtube.com/watch?v=r5emjIgmFB8)
+* [Stackoverflow](https://stackoverflow.com/questions/28675209/how-to-call-gesture-tap-on-uiview-programmatically-in-swift/28675664#28675664)
+
+#### 3D GestureRecognizers in RealityKit
+
+To call gesture tap on UIView programmatically you need to initialize `UITapGestureRecognizer`, like so:
+    
+    let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+    myView.addGestureRecognizer(tap)
+
+Then, you should implement the handler, which will be called each time when a tap event occurs:
+
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+    // handling code
+    }
 
 
 

@@ -145,16 +145,18 @@ Here is the simplest way to add Gestures on View in Swift 5:
 
 #### 3D GestureRecognizers in RealityKit
 
-To call gesture tap on UIView programmatically you need to initialize `UITapGestureRecognizer`, like so:
-    
-    let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-    myView.addGestureRecognizer(tap)
+It's setup in the same way in the ViewController, but the `@objc` func called has an extra method to determine which entity has been tapped: 
 
-Then, you should implement the handler, which will be called each time when a tap event occurs:
-
-    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-    // handling code
-    }
+    @objc func handleTap(_ sender: UIGestureRecognizer) {
+            
+            // 2D Screen tap
+            let tapLocation = sender.location(in: arView)
+            
+            // Raycast query
+            if let card = arView.entity(at: tapLocation) {
+                print(card.name)
+            }
+        }
 
 
 

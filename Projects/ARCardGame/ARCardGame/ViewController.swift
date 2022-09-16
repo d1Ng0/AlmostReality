@@ -22,28 +22,15 @@ class ViewController: UIViewController {
     }
     
     @objc func handleTap(_ sender: UIGestureRecognizer) {
+        
         // 2D Screen tap
         let tapLocation = sender.location(in: arView)
         
         // Raycast query
         if let card = arView.entity(at: tapLocation) {
             print(card.name)
+            flipDownCard(card)
         }
-//        guard let raycastQuery = arView.hitTest(<#T##point: CGPoint##CGPoint#>, types: <#T##ARHitTestResult.ResultType#>)
-//        guard let hitEntity = arView.entity(at: touchInView) else {
-//            print("No entity was hit")
-//            return
-//        }
-//        print(hitEntity)
-//      }
-    
-//     Hit Testing
-//    @IBAction func onTap (_ sender: UITapGestureRecognizer) {
-//        print("TTTTTTAPPPP")
-//        let tapLocation = sender.location(in: arView)
-//        if let card = arView.entity(at: tapLocation) {
-//            print(card.name)
-//        }
     }
     
     func loadModels() -> [ModelEntity] {
@@ -83,6 +70,20 @@ class ViewController: UIViewController {
             let z = Float(index / 4) - 1.5
             card.position = [x * 0.07, 0, z * 0.07]
             anchor.addChild(card)
+            // Initialize faceDown
+            flipUpCard(card)
         }
+    }
+    
+    func flipUpCard(_ card: Entity) {
+        var flipUpTransform = card.transform
+        flipUpTransform.rotation = simd_quatf(angle: .pi, axis: [1,0,0])
+        let flipUpController = card.move(to: flipUpTransform, relativeTo: card.parent, duration: 0.25, timingFunction: .easeInOut)
+    }
+    
+    func flipDownCard(_ card: Entity) {
+        var flipDownTransform = card.transform
+        flipDownTransform.rotation = simd_quatf(angle: 0, axis: [1,0,0])
+        let flipUpController = card.move(to: flipDownTransform, relativeTo: card.parent, duration: 0.25, timingFunction: .easeInOut)
     }
 }

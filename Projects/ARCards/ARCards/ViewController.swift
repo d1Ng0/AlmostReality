@@ -59,6 +59,10 @@ class ViewController: UIViewController {
             //*/
         }
         
+        // Tapping - is ok if is loaded before the cards
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        arView.addGestureRecognizer(tapGestureRecognizer)
+        
         // Set debug options
         #if DEBUG
         arView.debugOptions = .showPhysics
@@ -77,13 +81,18 @@ class ViewController: UIViewController {
             card.position = [x * 0.07, 0, z * 0.07]
             anchor.addChild(card)
             // Initialize faceDown
-//            flipUpCard(card)
+            flipUpCard(card)
         }
     }
     
     func createCards(with models: [ModelEntity]) -> [ModelEntity] {
         var cards: [ModelEntity] = []
         for cardTemplate in models {
+            cardTemplate.generateCollisionShapes(recursive: true)
+            print(cardTemplate.model)
+//            cardTemplate.name = cardTemplate.name
+            
+
             for _ in 1...2 {
                 cards.append(cardTemplate.clone(recursive: true))
             }
@@ -91,5 +100,32 @@ class ViewController: UIViewController {
         cards.shuffle()
         return cards
     }
+    
+    func flipUpCard(_ card: Entity) {
+        var flipUpTransform = card.transform
+        flipUpTransform.rotation = simd_quatf(angle: .pi, axis: [1,0,0])
+        let _ = card.move(to: flipUpTransform, relativeTo: card.parent, duration: 0.25, timingFunction: .easeInOut)
+    }
+    
+    func flipDownCard(_ card: Entity) {
+        var flipUpTransform = card.transform
+        flipUpTransform.rotation = simd_quatf(angle: 0, axis: [1,0,0])
+        let _ = card.move(to: flipUpTransform, relativeTo: card.parent, duration: 0.25, timingFunction: .easeInOut)
+    }
+    
+    @objc func handleTap(_ sender: UIGestureRecognizer) {
+        
+        print("Handle Tap")
+        
+        // 2D Screen tap
+        let tapLocation = sender.location(in: arView)
+        
+        // Raycast query
+        if let card = arView.entity(at: tapLocation) {
+            print(card.name)
+            flipDownCard(card)
+        }
+    }
+
  
 }

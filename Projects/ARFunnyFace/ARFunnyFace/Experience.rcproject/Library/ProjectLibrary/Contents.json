@@ -1,3 +1,17 @@
 [
-
+  {
+    "libraryIdentifier" : "45a67ecab712b38e0a95b04e5d34cef5",
+    "format" : "model",
+    "displayName" : "Venice_Mask.usdz"
+  },
+  {
+    "libraryIdentifier" : "91fea825cb9da7dcb81fbbc76ec06a58",
+    "format" : "model",
+    "displayName" : "Lumecluster_Dreamer_Half_Mask_Beacon.usdz"
+  },
+  {
+    "libraryIdentifier" : "f061033c21d929d2da436e20e8e285fe",
+    "format" : "model",
+    "displayName" : "Glasses.usdz"
+  }
 ]

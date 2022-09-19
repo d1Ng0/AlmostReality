@@ -113,9 +113,12 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 When loading models this way, the scene freezes until the model is fully loaded. If you want to load a model after the experience has already started, you should use the asynchronous loader.
 
 ##### References:
+* [Loading Async doesn't work - Stackoverflow](https://stackoverflow.com/questions/60075802/loading-anchor-from-url-async-doesnt-work)
+* [Loading Entities from a File - Apple Article](https://developer.apple.com/documentation/realitykit/loading-entities-from-a-file)
 * [RealityKit Basics - Medium](https://medium.com/futureproofd/realitykit-basics-part-1-8ede1143137b)
 * [Get 3D Content for Your Apple AR Apps // RealityKit + USDZ Tools - YouTube](https://www.youtube.com/watch?v=zm3s17PVxGA)
 * [Export .USDZ from Maya - YouTube](https://www.youtube.com/watch?v=Ae3kkAp35C4)
+* [Merging multiple publishers](https://swiftwithmajid.com/2021/05/12/combining-multiple-combine-publishers-in-swift/)
 
 #### RealityKit Face camera 
 ##### References:

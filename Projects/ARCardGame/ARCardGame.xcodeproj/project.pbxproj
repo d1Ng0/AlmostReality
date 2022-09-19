@@ -12,8 +12,15 @@
 		C6301E7328CFF2C700246997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7128CFF2C700246997 /* Main.storyboard */; };
 		C6301E7528CFF2C800246997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7428CFF2C800246997 /* Assets.xcassets */; };
 		C6301E7828CFF2C800246997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6301E7628CFF2C800246997 /* LaunchScreen.storyboard */; };
-		C64E4C4128D28B9D00465E40 /* Onion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C64E4C3F28D28B9D00465E40 /* Onion.usdz */; };
-		C64E4C4228D28B9D00465E40 /* Garlic.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C64E4C4028D28B9D00465E40 /* Garlic.usdz */; };
+		C698C93428D5640400E95A23 /* BellPepper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C92B28D5640400E95A23 /* BellPepper.usdz */; };
+		C698C93528D5640400E95A23 /* Cucumber.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C92C28D5640400E95A23 /* Cucumber.usdz */; };
+		C698C93628D5640400E95A23 /* Onion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C92D28D5640400E95A23 /* Onion.usdz */; };
+		C698C93728D5640400E95A23 /* Garlic.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C92E28D5640400E95A23 /* Garlic.usdz */; };
+		C698C93828D5640400E95A23 /* Taro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C92F28D5640400E95A23 /* Taro.usdz */; };
+		C698C93928D5640400E95A23 /* Carrot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C93028D5640400E95A23 /* Carrot.usdz */; };
+		C698C93A28D5640400E95A23 /* Beetroot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C93128D5640400E95A23 /* Beetroot.usdz */; };
+		C698C93B28D5640400E95A23 /* Potato.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C93228D5640400E95A23 /* Potato.usdz */; };
+		C698C93C28D5640400E95A23 /* Ginger.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C698C93328D5640400E95A23 /* Ginger.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +30,15 @@
 		C6301E7228CFF2C700246997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6301E7428CFF2C800246997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6301E7728CFF2C800246997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C64E4C3F28D28B9D00465E40 /* Onion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Onion.usdz; sourceTree = "<group>"; };
-		C64E4C4028D28B9D00465E40 /* Garlic.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Garlic.usdz; sourceTree = "<group>"; };
+		C698C92B28D5640400E95A23 /* BellPepper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = BellPepper.usdz; sourceTree = "<group>"; };
+		C698C92C28D5640400E95A23 /* Cucumber.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Cucumber.usdz; sourceTree = "<group>"; };
+		C698C92D28D5640400E95A23 /* Onion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Onion.usdz; sourceTree = "<group>"; };
+		C698C92E28D5640400E95A23 /* Garlic.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Garlic.usdz; sourceTree = "<group>"; };
+		C698C92F28D5640400E95A23 /* Taro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Taro.usdz; sourceTree = "<group>"; };
+		C698C93028D5640400E95A23 /* Carrot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Carrot.usdz; sourceTree = "<group>"; };
+		C698C93128D5640400E95A23 /* Beetroot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Beetroot.usdz; sourceTree = "<group>"; };
+		C698C93228D5640400E95A23 /* Potato.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Potato.usdz; sourceTree = "<group>"; };
+		C698C93328D5640400E95A23 /* Ginger.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Ginger.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +55,6 @@
 		C6301E5F28CFF2C700246997 = {
 			isa = PBXGroup;
 			children = (
-				C64E4C3E28D28B9D00465E40 /* usdz */,
 				C6301E6A28CFF2C700246997 /* ARCardGame */,
 				C6301E6928CFF2C700246997 /* Products */,
 			);
@@ -58,6 +71,7 @@
 		C6301E6A28CFF2C700246997 /* ARCardGame */ = {
 			isa = PBXGroup;
 			children = (
+				C64E4C3E28D28B9D00465E40 /* usdz */,
 				C6301E6B28CFF2C700246997 /* AppDelegate.swift */,
 				C6301E6D28CFF2C700246997 /* ViewController.swift */,
 				C6301E7128CFF2C700246997 /* Main.storyboard */,
@@ -70,11 +84,17 @@
 		C64E4C3E28D28B9D00465E40 /* usdz */ = {
 			isa = PBXGroup;
 			children = (
-				C64E4C3F28D28B9D00465E40 /* Onion.usdz */,
-				C64E4C4028D28B9D00465E40 /* Garlic.usdz */,
+				C698C93128D5640400E95A23 /* Beetroot.usdz */,
+				C698C92B28D5640400E95A23 /* BellPepper.usdz */,
+				C698C93028D5640400E95A23 /* Carrot.usdz */,
+				C698C92C28D5640400E95A23 /* Cucumber.usdz */,
+				C698C92E28D5640400E95A23 /* Garlic.usdz */,
+				C698C93328D5640400E95A23 /* Ginger.usdz */,
+				C698C92D28D5640400E95A23 /* Onion.usdz */,
+				C698C93228D5640400E95A23 /* Potato.usdz */,
+				C698C92F28D5640400E95A23 /* Taro.usdz */,
 			);
-			name = usdz;
-			path = Maya/3DAssets/usdz;
+			path = usdz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,10 +155,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C698C93528D5640400E95A23 /* Cucumber.usdz in Resources */,
 				C6301E7828CFF2C800246997 /* LaunchScreen.storyboard in Resources */,
-				C64E4C4228D28B9D00465E40 /* Garlic.usdz in Resources */,
-				C64E4C4128D28B9D00465E40 /* Onion.usdz in Resources */,
+				C698C93728D5640400E95A23 /* Garlic.usdz in Resources */,
+				C698C93C28D5640400E95A23 /* Ginger.usdz in Resources */,
+				C698C93B28D5640400E95A23 /* Potato.usdz in Resources */,
+				C698C93A28D5640400E95A23 /* Beetroot.usdz in Resources */,
+				C698C93828D5640400E95A23 /* Taro.usdz in Resources */,
 				C6301E7528CFF2C800246997 /* Assets.xcassets in Resources */,
+				C698C93628D5640400E95A23 /* Onion.usdz in Resources */,
+				C698C93428D5640400E95A23 /* BellPepper.usdz in Resources */,
+				C698C93928D5640400E95A23 /* Carrot.usdz in Resources */,
 				C6301E7328CFF2C700246997 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

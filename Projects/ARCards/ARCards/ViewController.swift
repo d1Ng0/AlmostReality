@@ -1,6 +1,7 @@
 import UIKit
 import RealityKit
 import Combine
+import ARKit
 
 class ViewController: UIViewController {
     
@@ -12,8 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create an anchor for horizontal plane
+        let anchor = AnchorEntity(.plane(.horizontal, classification: .table, minimumBounds: [0.1, 0.1]))
+        arView.scene.addAnchor(anchor)
+        
         if let assetURLs = Bundle.main.urls(forResourcesWithExtension: "usdz", subdirectory: "") {
-            
+                        
             // Simple load
             /*
             for url in assetURLs {
@@ -53,7 +58,7 @@ class ViewController: UIViewController {
             },
                   receiveValue: { [weak self] entity in
                 let cards = self?.createCards(with: entity)
-                self?.positionCards(cards!)
+                self?.positionCards(cards!, anchor: anchor)
             }).store(in: &cancellables)
 
             //*/
@@ -63,16 +68,24 @@ class ViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         arView.addGestureRecognizer(tapGestureRecognizer)
         
+        // Add occlusion material
+        let occlusionMesh = MeshResource.generateBox(size: 0.5)
+        let occlusionMaterial = OcclusionMaterial()
+        let occlusionEntity = ModelEntity(mesh: occlusionMesh, materials: [occlusionMaterial])
+        occlusionEntity.position.y = -0.5/2-0.01
+        anchor.addChild(occlusionEntity)
+        
+        
         // Set debug options
         #if DEBUG
-        arView.debugOptions = .showPhysics
+//        arView.debugOptions = .showPhysics
         #endif
     }
     
-    func positionCards(_ cards: [ModelEntity] ) {
+    func positionCards(_ cards: [ModelEntity], anchor: AnchorEntity ) {
         // Create an anchor for horizontal plane
-        let anchor = AnchorEntity(.plane(.horizontal, classification: .table, minimumBounds: [0.1, 0.1]))
-        arView.scene.addAnchor(anchor)
+//        let anchor = AnchorEntity(.plane(.horizontal, classification: .table, minimumBounds: [0.1, 0.1]))
+//        arView.scene.addAnchor(anchor)
     
         // Position cards
         for (index, card) in cards.enumerated() {
@@ -89,10 +102,6 @@ class ViewController: UIViewController {
         var cards: [ModelEntity] = []
         for cardTemplate in models {
             cardTemplate.generateCollisionShapes(recursive: true)
-            print(cardTemplate.model)
-//            cardTemplate.name = cardTemplate.name
-            
-
             for _ in 1...2 {
                 cards.append(cardTemplate.clone(recursive: true))
             }
@@ -114,17 +123,12 @@ class ViewController: UIViewController {
     }
     
     @objc func handleTap(_ sender: UIGestureRecognizer) {
-        
-        print("Handle Tap")
-        
         // 2D Screen tap
         let tapLocation = sender.location(in: arView)
-        
         // Raycast query
         if let card = arView.entity(at: tapLocation) {
             print(card.name)
-            flipDownCard(card)
-        }
+            flipDownCard(card)        }
     }
 
  

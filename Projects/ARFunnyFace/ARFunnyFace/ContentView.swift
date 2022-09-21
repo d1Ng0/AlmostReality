@@ -3,6 +3,7 @@ import RealityKit
 import ARKit
 
 var arView: ARView!
+var robot: Experience.Robot!
 
 struct ContentView : View {
     @State var propId: Int = 0
@@ -25,7 +26,7 @@ struct ContentView : View {
                 }
                 Spacer()
                 Button(action: {
-                    self.propId = self.propId >= 2 ? 2 : self.propId + 1
+                    self.propId = self.propId >= 3 ? 3 : self.propId + 1
                 }) {
                     Image("NextButton").clipShape(Circle())
                 }
@@ -55,6 +56,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     func updateUIView(_ uiView: ARView, context: Context) {
         
+        robot = nil
         arView.scene.anchors.removeAll()
         
         let arConfiguration = ARFaceTrackingConfiguration()
@@ -70,10 +72,22 @@ struct ARViewContainer: UIViewRepresentable {
         case 2:
             let arAnchor = try! Experience.loadGlasses()
             uiView.scene.anchors.append(arAnchor)
+        case 3:
+            let arAnchor = try! Experience.loadRobot()
+            uiView.scene.anchors.append(arAnchor)
+            robot = arAnchor
         default:
             break
         }
-
+    }
+    
+    class ARDelegateHandler: NSObject, ARSessionDelegate {
+        var arViewContainer: ARViewContainer
+        
+        init(_ control: ARViewContainer) {
+            arViewContainer = control
+            super.init()
+        }
     }
     
 }

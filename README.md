@@ -7,6 +7,18 @@ _"Edgar Dale states that the human brain remembers 10% of what we read, 20% of w
 No matter your level of expertise, it can be daunting to step out of your comfort zone when you’re first learning about new frameworks or technologies. 
 
 ---
+## Swift Language
+
+Swift language syntax and patterns.
+
+### Communication pattern
+
+Delegate Protocol Communication Pattern in Swift. 
+Delegate design pattern uses protocol is 1:1 relationship whereas Notifications design pattern, uses observers is one-to-many.
+##### References:
+* [Swift Delegate Protocol Pattern Tutorial - YouTube](https://www.youtube.com/watch?v=DBWu6TnhLeY)
+
+---
 ## SwiftUI
 
 SwiftUI is a new way to build user interfaces for apps on Apple platforms. It allows developers to define the UI using Swift code.
@@ -107,7 +119,7 @@ With __RealityKit__ everything inside your scene is an __Entity__, and from here
 * [SwiftUI Augmented Reality With Realitykit And ARkit - YouTube](https://www.youtube.com/watch?v=7dRizQwiMic)
 * [Custom Material with Metal shaders](https://medium.com/geekculture/realitykit-911-custom-material-with-metal-shaders-e7e1f7077e69)
 
-#### Loading .USDZ in RealityKit
+#### Loading .USDZ
 
     let model = try! Entity.loadModel(named: “modelName”)
 
@@ -121,11 +133,15 @@ When loading models this way, the scene freezes until the model is fully loaded.
 * [Export .USDZ from Maya - YouTube](https://www.youtube.com/watch?v=Ae3kkAp35C4)
 * [Merging multiple publishers](https://swiftwithmajid.com/2021/05/12/combining-multiple-combine-publishers-in-swift/)
 
-#### RealityKit Face camera 
+#### RealityKit Face camera
+
+To animate blendshapes RK uses ARSessionDelegate Protocol. The delagate gains access to `Updated Anchors` which is where you monitor for changes that trigger bland shapes.$$
 ##### References:
 * [Make an AR Animoji with RealityKit and Reality Composer](https://www.youtube.com/watch?v=xXX2s-cWJNw)
+* [Book: Apple AR by Tutorials, 2nd Edition, Chapter 11]
 
-#### 2D GestureRecognizer in UIKit
+### Gesture recognizer
+#### Part 1 - 2D GestureRecognizer in UIKit
 
 Here is the simplest way to add Gestures on View in Swift 5:
     
@@ -147,7 +163,7 @@ Here is the simplest way to add Gestures on View in Swift 5:
 * [Gesture Recognizers in Swift with Xcode 11 | iOS Development - YouTube](https://www.youtube.com/watch?v=r5emjIgmFB8)
 * [Stackoverflow](https://stackoverflow.com/questions/28675209/how-to-call-gesture-tap-on-uiview-programmatically-in-swift/28675664#28675664)
 
-#### 3D GestureRecognizers in RealityKit
+#### Part 2 - 3D GestureRecognizers in RealityKit
 
 It's setup in the same way in the ViewController, but the `@objc` func called has an extra method to determine which entity has been tapped: 
 
@@ -161,11 +177,5 @@ It's setup in the same way in the ViewController, but the `@objc` func called ha
                 print(card.name)
             }
         }
-
-
-
-
-
-
 
 ## Rotation weeks 1-13th

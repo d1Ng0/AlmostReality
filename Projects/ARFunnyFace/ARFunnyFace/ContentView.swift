@@ -106,6 +106,7 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+            
             guard robot != nil else { return }
             var faceAnchor: ARFaceAnchor?
             for anchor in anchors {

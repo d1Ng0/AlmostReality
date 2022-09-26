@@ -22,11 +22,37 @@ Delegate design pattern uses protocol is 1:1 relationship whereas Notifications 
 ## SwiftUI
 
 SwiftUI is a new way to build user interfaces for apps on Apple platforms. It allows developers to define the UI using Swift code.
-
 ##### References:
 * [CS193 Intro to SwiftUI](https://www.youtube.com/watch?v=bqu6BquVi2M&list=PLpGHT1n4-mAsxuRxVPv7kj4-dQYoC3VVu)
 * [Apple - Creating and Combining Views](https://developer.apple.com/tutorials/swiftui)
 * [Apple - Sample Apps tutorials](https://developer.apple.com/tutorials/sample-apps)
+* [Every SwiftUI Element](https://detailspro.app/blog/a-tour-of-swiftui-design-elements)
+### SwiftUI Elements
+
+* Vertical Stack
+* Horizontal Stack
+* Layered Stack
+* Spacer
+* Text
+* Image
+* SF Symbol
+* Rectangle
+* Circle
+* Rounded Rectangle
+* Capsule
+* Divider
+* Scrolling Container
+* Blur
+* Gradient
+* Map
+##### References:
+* [Every SwiftUI Element](https://detailspro.app/blog/a-tour-of-swiftui-design-elements)
+
+### Observers: Binding and States
+
+##### References:
+* [State & Binding | SwiftUI in 5 minutes | 2020 - YouTube](https://www.youtube.com/watch?v=QHhot1qhOZ8)
+* [SwiftUI - @Binding Property Wrapper Explained - YouTube](https://www.youtube.com/watch?v=lgtB3WLEOYg)
 
 --- 
 ### UIKit
@@ -140,8 +166,8 @@ To animate blendshapes RK uses ARSessionDelegate Protocol. The delagate gains ac
 * [Make an AR Animoji with RealityKit and Reality Composer](https://www.youtube.com/watch?v=xXX2s-cWJNw)
 * [Book: Apple AR by Tutorials, 2nd Edition, Chapter 11]
 
-### Gesture recognizer
-#### Part 1 - 2D GestureRecognizer in UIKit
+#### Gesture recognizer
+##### Part 1 - 2D GestureRecognizer in UIKit
 
 Here is the simplest way to add Gestures on View in Swift 5:
     
@@ -163,7 +189,7 @@ Here is the simplest way to add Gestures on View in Swift 5:
 * [Gesture Recognizers in Swift with Xcode 11 | iOS Development - YouTube](https://www.youtube.com/watch?v=r5emjIgmFB8)
 * [Stackoverflow](https://stackoverflow.com/questions/28675209/how-to-call-gesture-tap-on-uiview-programmatically-in-swift/28675664#28675664)
 
-#### Part 2 - 3D GestureRecognizers in RealityKit
+##### Part 2 - 3D GestureRecognizers in RealityKit
 
 It's setup in the same way in the ViewController, but the `@objc` func called has an extra method to determine which entity has been tapped: 
 
@@ -177,5 +203,27 @@ It's setup in the same way in the ViewController, but the `@objc` func called ha
                 print(card.name)
             }
         }
+
+---
+#### Diceting a RealityKit App that uses UIKit and SWiftUI
+
+In order to use RealityKit in SwiftUI you are forced to pass through UIKit.
+To do so we start by creating the interface in SwiftUI: in the body we add an instance to a `UIViewRepresantable` struct where we'll add all the AR components.
+We start by implementing the `makeUIView` and `updateUIView`. At this point we can compile and run the App, but SwiftUI doesn't know what happens inside ARView, because the two components don't communicate.
+To enable communication between UIKit and SwiftUI we need to implement a `coordinator` using `func makeCoordinator() -> ()`.
+The class/function (?) the `makeCoordinator` returns is implemented in a `class` that lives inside the same `struct`.
+By adding `makeCoordinator() -> ()` SwiftUI will automatically pass information to the coordinator inside UIKit Representable.
+
+##### Project:
+* `ARFunnyFace`
+* `SwiftUiARTemplate`
+##### References:
+* [SwiftUI Coordinators are not UIKit Coordinator Pattern](https://www.hackingwithswift.com/books/ios-swiftui/using-coordinators-to-manage-swiftui-view-controllers)
+* [Using UIKit Components in SwiftUI (Coordinators)](https://www.youtube.com/watch?v=WoJtrlDBlyY)
+
+### Displaying a pointcloud
+
+#### References: 
+* [Generate Point Clouds With ARKit 4](https://www.youtube.com/watch?v=s7RF_m5aq3o)
 
 ## Rotation weeks 1-13th
